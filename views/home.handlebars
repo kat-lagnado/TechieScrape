@@ -1,0 +1,20 @@
+{{> navbar saved=false home=true}} 
+<div class="jumbotron">
+<h1>ScrapeNews..</h1>
+
+<h2>Techie scrape!</h2>
+</div>
+{{#if articles}}
+<ul>
+    {{#each articles}}
+       <li>
+          <h3>{{title}}</h3> 
+          <p><a href="{{link}}">View Article</a></p>
+          <button data-id="{{_id}}" class="btn btn-secondary update-btn">Save</button>
+       </li>
+    {{/each}}
+</ul>
+{{else}}
+<h3>No Articles to display!</h3>
+
+{{/if}}
